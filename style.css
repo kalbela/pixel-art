@@ -1,0 +1,8 @@
+@font-face {
+    font-family: font;
+    src: url(visitor1.ttf);
+}
+  
+* {
+    font-family: font;
+}
