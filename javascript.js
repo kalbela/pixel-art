@@ -42,16 +42,20 @@ let eraser = document.querySelector(".eraser");
 let eraserOn = false;
 
 rainbowColor.addEventListener("click", () => {
-    if (!eraserOn) {
-        rainbowColorOn = !rainbowColorOn;
-        rainbowColor.classList.toggle("selected-btn");
+    rainbowColorOn = !rainbowColorOn;
+    rainbowColor.classList.toggle("selected-btn");
+    if (eraserOn) {
+        eraserOn = false;
+        eraser.classList.remove("selected-btn");
     }
 })
 
 eraser.addEventListener("click", () => {
-    if (!rainbowColorOn) {
-        eraserOn = !eraserOn;
-        eraser.classList.toggle("selected-btn");
+    eraserOn = !eraserOn;
+    eraser.classList.toggle("selected-btn");
+    if (rainbowColorOn) {
+        rainbowColorOn = false;
+        rainbowColor.classList.remove("selected-btn");
     }
 })
 
