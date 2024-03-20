@@ -83,10 +83,14 @@ let reset = document.querySelector(".reset");
 reset.addEventListener("click", resetCanvas);
 
 function resetCanvas() {
-    totalTiles = 16;
+    range.value = 16;
+    totalTiles = range.value;
+    rangeMsg.textContent = "16 X 16";
     createCanvas();
     rainbowColorOn = false;
     eraserOn = false;
     colorInput.value = "#000000";
     color = colorInput.value;
+    rainbowColor.classList.remove("selected-btn");
+    eraser.classList.remove("selected-btn");
 }
