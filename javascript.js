@@ -34,6 +34,13 @@ function createCanvas() {
 let colorInput = document.querySelector("input[type=color]");
 let color = colorInput.value;
 
+let rainbowColor = document.querySelector(".rainbow");
+let rainbowColorOn = false;
+
+rainbowColor.addEventListener("click", () => {
+    rainbowColorOn = !rainbowColorOn;
+})
+
 colorInput.addEventListener("input", () => {
     color = colorInput.value;
 })
@@ -41,5 +48,14 @@ colorInput.addEventListener("input", () => {
 container.addEventListener("click", paint);
 
 function paint(e) {
-    e.target.style.backgroundColor = color;
+    if (rainbowColorOn) e.target.style.backgroundColor = generateRandomColor();
+    else e.target.style.backgroundColor = color;
+}
+
+function generateRandomColor() {
+    let min = 50, max = 255;
+    let r = Math.floor(Math.random() * (max-min + 1)) + min;
+    let g = Math.floor(Math.random() * (max-min + 1)) + min;
+    let b = Math.floor(Math.random() * (max-min + 1)) + min;
+    return `rgb(${r}, ${g}, ${b})`;
 }
