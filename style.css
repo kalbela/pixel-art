@@ -85,3 +85,30 @@ input[type="range"]::-webkit-slider-thumb {
     flex-direction: column;
     gap: 25px;
 }
+
+@media (max-width: 900px) {
+    body {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 790px) {
+    .canvas-container {
+        width: 400px;
+        height: 390px;
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .canvas-container {
+        width: 280px;
+        height: 270px;
+    }
+    input, p {
+        margin: 0 auto;
+    }
+}
