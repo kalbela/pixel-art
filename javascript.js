@@ -29,3 +29,17 @@ function createCanvas() {
         }
     }
 }
+
+
+let colorInput = document.querySelector("input[type=color]");
+let color = colorInput.value;;
+
+colorInput.addEventListener("input", () => {
+    color = colorInput.value;
+})
+
+container.addEventListener("click", paint);
+
+function paint(e) {
+    e.target.style.backgroundColor = color;
+}
