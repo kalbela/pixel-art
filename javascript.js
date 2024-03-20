@@ -62,12 +62,14 @@ colorInput.addEventListener("input", () => {
 container.addEventListener("click", paint);
 
 function paint(e) {
-    if (rainbowColorOn) e.target.style.backgroundColor = generateRandomColor();
-    else if (eraserOn) {
-        if (e.target.id == "ash") e.target.style.backgroundColor = "#d9d9d9ec";
-        else e.target.style.backgroundColor = "#fffffff5";
+    if (!e.target.getAttribute("class")) {
+        if (rainbowColorOn) e.target.style.backgroundColor = generateRandomColor();
+        else if (eraserOn) {
+            if (e.target.id == "ash") e.target.style.backgroundColor = "#d9d9d9ec";
+            else e.target.style.backgroundColor = "#fffffff5";
+        }
+        else e.target.style.backgroundColor = color;
     }
-    else e.target.style.backgroundColor = color;
 }
 
 function generateRandomColor() {
