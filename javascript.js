@@ -38,17 +38,21 @@ let color = colorInput.value;
 let rainbowColor = document.querySelector(".rainbow");
 let rainbowColorOn = false;
 
-rainbowColor.addEventListener("click", () => {
-    rainbowColorOn = !rainbowColorOn;
-    rainbowColor.classList.toggle("selected-btn");
-})
-
 let eraser = document.querySelector(".eraser");
 let eraserOn = false;
 
+rainbowColor.addEventListener("click", () => {
+    if (!eraserOn) {
+        rainbowColorOn = !rainbowColorOn;
+        rainbowColor.classList.toggle("selected-btn");
+    }
+})
+
 eraser.addEventListener("click", () => {
-    eraserOn = !eraserOn;
-    eraser.classList.toggle("selected-btn");
+    if (!rainbowColorOn) {
+        eraserOn = !eraserOn;
+        eraser.classList.toggle("selected-btn");
+    }
 })
 
 colorInput.addEventListener("input", () => {
