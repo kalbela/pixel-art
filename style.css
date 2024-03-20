@@ -20,7 +20,7 @@ body {
     background-size: cover;
 }
 
-.container {
+.canvas-container {
     width: 480px;
     height: 460px;
     display: flex;

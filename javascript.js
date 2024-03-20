@@ -1,4 +1,4 @@
-let container = document.querySelector(".container");
+let container = document.querySelector(".canvas-container");
 let containerWidth = window.getComputedStyle(container).getPropertyValue("width").slice(0, -2);
 let containerHeight = window.getComputedStyle(container).getPropertyValue("height").slice(0, -2);
 
