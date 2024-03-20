@@ -59,7 +59,10 @@ colorInput.addEventListener("input", () => {
     color = colorInput.value;
 })
 
-container.addEventListener("click", paint);
+container.addEventListener("mouseover", event => {
+    if (event.buttons === 1) paint(event);
+});
+container.addEventListener("mousedown", paint);
 
 function paint(e) {
     if (!e.target.getAttribute("class")) {
