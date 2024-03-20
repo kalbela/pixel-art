@@ -33,7 +33,7 @@ button {
     padding: 6px 0;
     font-size: 20px;
     letter-spacing: 2px;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.808);
     border: 2px solid rgb(31, 31, 31);
     color: rgb(31, 31, 31);
     width: 150px;
