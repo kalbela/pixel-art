@@ -22,6 +22,7 @@ function createCanvas() {
             let tile = document.createElement("div");
             if (row%2 === 0 && column % 2 === 0 || row % 2 !== 0 && column % 2 !== 0) {
                 tile.style.backgroundColor = "#d9d9d9ec";
+                tile.setAttribute("id", "ash");
             } else tile.style.backgroundColor = "#fffffff5";
             tile.style.width = `${containerWidth/totalTiles}px`;
             tile.style.height = `${containerHeight/totalTiles}px`;
@@ -41,6 +42,13 @@ rainbowColor.addEventListener("click", () => {
     rainbowColorOn = !rainbowColorOn;
 })
 
+let eraser = document.querySelector(".eraser");
+let eraserOn = false;
+
+eraser.addEventListener("click", () => {
+    eraserOn = !eraserOn;
+})
+
 colorInput.addEventListener("input", () => {
     color = colorInput.value;
 })
@@ -49,6 +57,10 @@ container.addEventListener("click", paint);
 
 function paint(e) {
     if (rainbowColorOn) e.target.style.backgroundColor = generateRandomColor();
+    else if (eraserOn) {
+        if (e.target.id == "ash") e.target.style.backgroundColor = "#d9d9d9ec";
+        else e.target.style.backgroundColor = "#fffffff5";
+    }
     else e.target.style.backgroundColor = color;
 }
 
