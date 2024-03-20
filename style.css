@@ -34,8 +34,8 @@ button {
     font-size: 20px;
     letter-spacing: 2px;
     background: transparent;
-    border: 2px solid rgb(209, 209, 209);
-    color: rgb(250, 250, 250);
+    border: 2px solid rgb(31, 31, 31);
+    color: rgb(31, 31, 31);
     width: 150px;
     display: block;
     margin: 0 auto;
@@ -48,7 +48,6 @@ button:hover {
 .selected-btn {
     background-color: red;
     background: rgb(31, 31, 31);
-    border: 2px solid rgb(31, 31, 31);
     color: rgb(221, 221, 221);
 }
 
