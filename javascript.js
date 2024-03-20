@@ -71,3 +71,16 @@ function generateRandomColor() {
     let b = Math.floor(Math.random() * (max-min + 1)) + min;
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+let reset = document.querySelector(".reset");
+
+reset.addEventListener("click", resetCanvas);
+
+function resetCanvas() {
+    totalTiles = 16;
+    createCanvas();
+    rainbowColorOn = false;
+    eraserOn = false;
+    colorInput.value = "#000000";
+    color = colorInput.value;
+}
