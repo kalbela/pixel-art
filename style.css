@@ -51,3 +51,10 @@ button:hover {
 .range-msg {
     font-size: 20px;
 }
+
+input[type="color"] {
+    width: 50px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+}
