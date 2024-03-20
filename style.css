@@ -58,3 +58,18 @@ input[type="color"] {
     background-color: transparent;
     border: none;
 }
+
+input[type="range"] {
+    appearance: none;
+    background: #555555b2;
+    width: 100px;
+    height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    background: rgba(29, 29, 29, 0.767);
+    height: 9px;
+    width: 10px;
+    cursor: pointer;
+}
