@@ -40,6 +40,7 @@ let rainbowColorOn = false;
 
 rainbowColor.addEventListener("click", () => {
     rainbowColorOn = !rainbowColorOn;
+    rainbowColor.classList.toggle("selected-btn");
 })
 
 let eraser = document.querySelector(".eraser");
@@ -47,6 +48,7 @@ let eraserOn = false;
 
 eraser.addEventListener("click", () => {
     eraserOn = !eraserOn;
+    eraser.classList.toggle("selected-btn");
 })
 
 colorInput.addEventListener("input", () => {
