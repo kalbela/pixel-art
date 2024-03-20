@@ -47,3 +47,7 @@ button:hover {
     background: rgb(31, 31, 31);
     color: rgb(221, 221, 221);
 }
+
+.range-msg {
+    font-size: 20px;
+}
