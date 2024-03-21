@@ -103,6 +103,7 @@ input[type="range"]::-webkit-slider-thumb {
     body {
         flex-direction: column;
         justify-content: space-evenly;
+        padding: 20px 0;
     }
     .canvas-container {
         width: 280px;
