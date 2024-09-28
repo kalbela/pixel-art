@@ -1,1 +1,1 @@
-live: https://kalbela.github.io/pixel-art/
+link: https://kalbela.github.io/pixel-art/
